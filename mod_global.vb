@@ -4,7 +4,6 @@
     Public rs As New ADODB.Recordset
     Public diretorio, sql, aux_cpf, resp As String  'Declaração de Variáveis
     Public cont As Integer
-    Public tipoUsuarioAtual As String = ""
 
     Sub conectar_access()
         Try
@@ -17,4 +16,6 @@
             MsgBox("Erro ao Conectar: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try
     End Sub
+
+
 End Module
