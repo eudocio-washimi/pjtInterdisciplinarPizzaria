@@ -22,6 +22,7 @@ Partial Class frm_cad_clientes
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_cad_clientes))
         txt_nome = New TextBox()
         Label1 = New Label()
         txt_fone = New MaskedTextBox()
@@ -33,14 +34,13 @@ Partial Class frm_cad_clientes
         Label5 = New Label()
         txt_taxa = New MaskedTextBox()
         btn_gravar = New Button()
-        btn_endereco = New Button()
         dgv_clientes = New DataGridView()
         CType(dgv_clientes, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' txt_nome
         ' 
-        txt_nome.Location = New Point(155, 78)
+        txt_nome.Location = New Point(155, 76)
         txt_nome.Name = "txt_nome"
         txt_nome.Size = New Size(217, 23)
         txt_nome.TabIndex = 4
@@ -58,10 +58,10 @@ Partial Class frm_cad_clientes
         ' txt_fone
         ' 
         txt_fone.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txt_fone.Location = New Point(26, 78)
+        txt_fone.Location = New Point(26, 76)
         txt_fone.Mask = "(99) 00000-0000"
         txt_fone.Name = "txt_fone"
-        txt_fone.Size = New Size(109, 25)
+        txt_fone.Size = New Size(100, 25)
         txt_fone.TabIndex = 5
         ' 
         ' Label2
@@ -131,23 +131,12 @@ Partial Class frm_cad_clientes
         ' 
         btn_gravar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         btn_gravar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_gravar.Location = New Point(267, 263)
+        btn_gravar.Location = New Point(141, 267)
         btn_gravar.Name = "btn_gravar"
         btn_gravar.Size = New Size(105, 68)
         btn_gravar.TabIndex = 14
         btn_gravar.Text = "Gravar"
         btn_gravar.UseVisualStyleBackColor = False
-        ' 
-        ' btn_endereco
-        ' 
-        btn_endereco.BackColor = Color.Red
-        btn_endereco.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_endereco.Location = New Point(155, 263)
-        btn_endereco.Name = "btn_endereco"
-        btn_endereco.Size = New Size(96, 68)
-        btn_endereco.TabIndex = 15
-        btn_endereco.Text = "Novo Endereço"
-        btn_endereco.UseVisualStyleBackColor = False
         ' 
         ' dgv_clientes
         ' 
@@ -161,9 +150,9 @@ Partial Class frm_cad_clientes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(397, 557)
         Controls.Add(dgv_clientes)
-        Controls.Add(btn_endereco)
         Controls.Add(btn_gravar)
         Controls.Add(txt_taxa)
         Controls.Add(Label5)
@@ -193,6 +182,5 @@ Partial Class frm_cad_clientes
     Friend WithEvents Label5 As Label
     Friend WithEvents txt_taxa As MaskedTextBox
     Friend WithEvents btn_gravar As Button
-    Friend WithEvents btn_endereco As Button
     Friend WithEvents dgv_clientes As DataGridView
 End Class

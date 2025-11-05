@@ -4,12 +4,17 @@
             sql = $"SELECT * from tb_clientes where fone ='{txt_fone.Text}'"
             rs = db.Execute(sql)
             If rs.EOF = False Then
-                sql = $"UPDATE tb_clientes set nome='{txt_nome.Text}'"
-                rs = db.Execute(UCase(sql))
+                sql = $"UPDATE tb_clientes set nome='{txt_nome.Text}' where fone='{txt_fone.Text}'"
+                db.Execute(UCase(sql))
                 MsgBox("Dados alterados com sucesso!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "ATENÇÃO")
             Else
-                sql = $"INSERT INTO tb_clientes (fone,nome) VALUES
-                        ('{txt_fone.Text}', '{txt_nome.Text}')"
+                Dim taxa As String = txt_taxa.Text.Replace("R$", "").Replace("$", "").Replace("_", "").Trim()
+                taxa = taxa.Replace(".", ",")
+
+                sql = $"INSERT INTO tb_clientes (fone, nome, endereco, bairro, taxa) VALUES 
+                        ('{txt_fone.Text}', '{txt_nome.Text}', '{txt_endereco.Text}', '{txt_bairro.Text}', '{taxa}')"
+                db.Execute(UCase(sql))
+
                 MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO")
             End If
             txt_fone.Clear()
