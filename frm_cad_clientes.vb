@@ -32,5 +32,34 @@
 
     Private Sub frm_cad_clientes_Load(sender As Object, e As EventArgs) Handles Me.Load
         conectar_access()
+        carregar_dados()
+    End Sub
+
+    Sub carregar_dados()
+        Try
+            dgv_clientes.Rows.Clear()
+
+            sql = "SELECT * FROM tb_clientes ORDER BY nome ASC"
+            rs = db.Execute(sql)
+
+            Do While rs.EOF = False
+                dgv_clientes.Rows.Add(
+                rs.Fields("fone").Value,
+                rs.Fields("nome").Value,
+                rs.Fields("endereco").Value,
+                rs.Fields("bairro").Value,
+                Nothing,
+                Nothing
+            )
+                rs.MoveNext()
+            Loop
+
+        Catch ex As Exception
+            MsgBox("Erro ao carregar lista: " & ex.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Private Sub frm_cad_clientes_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Application.Exit()
     End Sub
 End Class
