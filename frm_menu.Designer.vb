@@ -25,6 +25,11 @@ Partial Class frm_menu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu))
         btn_gravar = New Button()
         PictureBox1 = New PictureBox()
+        btn_motoboys = New Button()
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -50,13 +55,74 @@ Partial Class frm_menu
         PictureBox1.TabIndex = 16
         PictureBox1.TabStop = False
         ' 
+        ' btn_motoboys
+        ' 
+        btn_motoboys.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_motoboys.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_motoboys.Location = New Point(12, 140)
+        btn_motoboys.Name = "btn_motoboys"
+        btn_motoboys.Size = New Size(111, 76)
+        btn_motoboys.TabIndex = 17
+        btn_motoboys.Text = "Cadastro de Motoboys"
+        btn_motoboys.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Button1.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(12, 232)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(111, 76)
+        Button1.TabIndex = 18
+        Button1.Text = "Cadastro de Produtos"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Button2.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(140, 49)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(111, 76)
+        Button2.TabIndex = 19
+        Button2.Text = "Pedidos"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Button3.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(140, 140)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(111, 76)
+        Button3.TabIndex = 20
+        Button3.Text = "Relatórios/Consultar"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button4
+        ' 
+        Button4.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Button4.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button4.Location = New Point(140, 232)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(111, 76)
+        Button4.TabIndex = 21
+        Button4.Text = "Gráficos"
+        Button4.UseVisualStyleBackColor = False
+        ' 
         ' frm_menu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(545, 360)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        Controls.Add(btn_motoboys)
         Controls.Add(PictureBox1)
         Controls.Add(btn_gravar)
         Name = "frm_menu"
@@ -67,4 +133,9 @@ Partial Class frm_menu
 
     Friend WithEvents btn_gravar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_motoboys As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

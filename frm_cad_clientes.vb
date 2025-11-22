@@ -31,7 +31,6 @@
     End Sub
 
     Private Sub frm_cad_clientes_Load(sender As Object, e As EventArgs) Handles Me.Load
-        conectar_access()
         carregar_dados()
     End Sub
 
@@ -59,7 +58,7 @@
         End Try
     End Sub
 
-    Private Sub frm_cad_clientes_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        Application.Exit()
+    Private Sub frm_cad_clientes_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_menu.Show()
     End Sub
 End Class

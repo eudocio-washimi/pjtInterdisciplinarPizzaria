@@ -27,97 +27,104 @@ Partial Class frm_pedidos
         Label3 = New Label()
         txt_endereco = New TextBox()
         Label2 = New Label()
-        txt_fone = New MaskedTextBox()
-        txt_nome = New TextBox()
+        txt_telefone = New MaskedTextBox()
+        txt_nome_cliente = New TextBox()
         Label1 = New Label()
         Label6 = New Label()
         Label7 = New Label()
-        MaskedTextBox1 = New MaskedTextBox()
-        ComboBox1 = New ComboBox()
+        txt_taxa_entrega = New MaskedTextBox()
+        rdb_entrega = New RadioButton()
+        rdb_retirada = New RadioButton()
+        rdb_salao = New RadioButton()
+        cmb_motoboy = New ComboBox()
         Label5 = New Label()
         Label8 = New Label()
-        ComboBox2 = New ComboBox()
+        cmb_tipo_produto = New ComboBox()
         Label9 = New Label()
-        TextBox1 = New TextBox()
+        cmb_produtos = New ComboBox()
         Label10 = New Label()
-        ComboBox3 = New ComboBox()
+        txt_qtd = New TextBox()
+        btn_adicionar = New Button()
+        dgv_itens = New DataGridView()
+        lbl_subtotal = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        lbl_total_final = New Label()
+        btn_finalizar = New Button()
+        CType(dgv_itens, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label4.Location = New Point(489, 245)
-        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Location = New Point(339, 83)
         Label4.Name = "Label4"
-        Label4.Size = New Size(83, 29)
+        Label4.Size = New Size(56, 19)
         Label4.TabIndex = 21
         Label4.Text = "Bairro"
         ' 
         ' txt_bairro
         ' 
-        txt_bairro.Location = New Point(489, 277)
-        txt_bairro.Margin = New Padding(4, 5, 4, 5)
+        txt_bairro.Location = New Point(339, 102)
         txt_bairro.Name = "txt_bairro"
-        txt_bairro.Size = New Size(200, 31)
+        txt_bairro.Size = New Size(141, 23)
         txt_bairro.TabIndex = 20
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label3.Location = New Point(31, 242)
-        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Location = New Point(22, 83)
         Label3.Name = "Label3"
-        Label3.Size = New Size(149, 29)
+        Label3.Size = New Size(83, 19)
         Label3.TabIndex = 19
-        Label3.Text = "Logradouro"
+        Label3.Text = "Endereço"
         ' 
         ' txt_endereco
         ' 
-        txt_endereco.Location = New Point(31, 277)
-        txt_endereco.Margin = New Padding(4, 5, 4, 5)
+        txt_endereco.Location = New Point(22, 102)
         txt_endereco.Name = "txt_endereco"
-        txt_endereco.Size = New Size(434, 31)
+        txt_endereco.Size = New Size(305, 23)
         txt_endereco.TabIndex = 18
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label2.Location = New Point(31, 135)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Location = New Point(140, 21)
         Label2.Name = "Label2"
-        Label2.Size = New Size(203, 29)
+        Label2.Size = New Size(135, 19)
         Label2.TabIndex = 17
         Label2.Text = "Nome do Cliente"
         ' 
-        ' txt_fone
+        ' txt_telefone
         ' 
-        txt_fone.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txt_fone.Location = New Point(31, 65)
-        txt_fone.Margin = New Padding(4, 5, 4, 5)
-        txt_fone.Mask = "(99) 00000-0000"
-        txt_fone.Name = "txt_fone"
-        txt_fone.Size = New Size(141, 33)
-        txt_fone.TabIndex = 16
+        txt_telefone.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txt_telefone.Location = New Point(22, 39)
+        txt_telefone.Mask = "(99) 00000-0000"
+        txt_telefone.Name = "txt_telefone"
+        txt_telefone.Size = New Size(100, 25)
+        txt_telefone.TabIndex = 16
         ' 
-        ' txt_nome
+        ' txt_nome_cliente
         ' 
-        txt_nome.Location = New Point(31, 167)
-        txt_nome.Margin = New Padding(4, 5, 4, 5)
-        txt_nome.Name = "txt_nome"
-        txt_nome.Size = New Size(434, 31)
-        txt_nome.TabIndex = 15
+        txt_nome_cliente.Location = New Point(140, 40)
+        txt_nome_cliente.Name = "txt_nome_cliente"
+        txt_nome_cliente.Size = New Size(340, 23)
+        txt_nome_cliente.TabIndex = 15
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label1.Location = New Point(31, 33)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Location = New Point(22, 20)
         Label1.Name = "Label1"
-        Label1.Size = New Size(110, 29)
+        Label1.Size = New Size(74, 19)
         Label1.TabIndex = 14
         Label1.Text = "Telefone"
         ' 
@@ -125,138 +132,258 @@ Partial Class frm_pedidos
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label6.Location = New Point(31, 343)
-        Label6.Margin = New Padding(4, 0, 4, 0)
+        Label6.Location = New Point(22, 206)
         Label6.Name = "Label6"
-        Label6.Size = New Size(0, 29)
+        Label6.Size = New Size(0, 19)
         Label6.TabIndex = 24
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
+        Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label7.Location = New Point(489, 135)
-        Label7.Margin = New Padding(4, 0, 4, 0)
+        Label7.Location = New Point(166, 207)
         Label7.Name = "Label7"
-        Label7.Size = New Size(65, 29)
+        Label7.Size = New Size(45, 19)
         Label7.TabIndex = 22
         Label7.Text = "Taxa"
         ' 
-        ' MaskedTextBox1
+        ' txt_taxa_entrega
         ' 
-        MaskedTextBox1.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        MaskedTextBox1.Location = New Point(489, 166)
-        MaskedTextBox1.Margin = New Padding(4, 5, 4, 5)
-        MaskedTextBox1.Mask = "$ 99,00"
-        MaskedTextBox1.Name = "MaskedTextBox1"
-        MaskedTextBox1.Size = New Size(154, 33)
-        MaskedTextBox1.TabIndex = 23
+        txt_taxa_entrega.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txt_taxa_entrega.Location = New Point(166, 226)
+        txt_taxa_entrega.Mask = "$ 99,00"
+        txt_taxa_entrega.Name = "txt_taxa_entrega"
+        txt_taxa_entrega.Size = New Size(109, 25)
+        txt_taxa_entrega.TabIndex = 23
         ' 
-        ' ComboBox1
+        ' rdb_entrega
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(176, 375)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(203, 33)
-        ComboBox1.TabIndex = 25
+        rdb_entrega.AutoSize = True
+        rdb_entrega.BackColor = Color.Transparent
+        rdb_entrega.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        rdb_entrega.Location = New Point(22, 172)
+        rdb_entrega.Name = "rdb_entrega"
+        rdb_entrega.Size = New Size(82, 22)
+        rdb_entrega.TabIndex = 25
+        rdb_entrega.TabStop = True
+        rdb_entrega.Text = "Entrega"
+        rdb_entrega.UseVisualStyleBackColor = False
+        ' 
+        ' rdb_retirada
+        ' 
+        rdb_retirada.AutoSize = True
+        rdb_retirada.BackColor = Color.Transparent
+        rdb_retirada.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        rdb_retirada.Location = New Point(204, 172)
+        rdb_retirada.Name = "rdb_retirada"
+        rdb_retirada.Size = New Size(86, 22)
+        rdb_retirada.TabIndex = 26
+        rdb_retirada.TabStop = True
+        rdb_retirada.Text = "Retirada"
+        rdb_retirada.UseVisualStyleBackColor = False
+        ' 
+        ' rdb_salao
+        ' 
+        rdb_salao.AutoSize = True
+        rdb_salao.BackColor = Color.Transparent
+        rdb_salao.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        rdb_salao.Location = New Point(394, 172)
+        rdb_salao.Name = "rdb_salao"
+        rdb_salao.Size = New Size(65, 22)
+        rdb_salao.TabIndex = 27
+        rdb_salao.TabStop = True
+        rdb_salao.Text = "Salão"
+        rdb_salao.UseVisualStyleBackColor = False
+        ' 
+        ' cmb_motoboy
+        ' 
+        cmb_motoboy.FormattingEnabled = True
+        cmb_motoboy.Location = New Point(22, 226)
+        cmb_motoboy.Name = "cmb_motoboy"
+        cmb_motoboy.Size = New Size(129, 23)
+        cmb_motoboy.TabIndex = 28
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label5.Location = New Point(176, 343)
-        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Location = New Point(21, 207)
         Label5.Name = "Label5"
-        Label5.Size = New Size(167, 29)
-        Label5.TabIndex = 26
-        Label5.Text = "Tipo da Pizza"
+        Label5.Size = New Size(76, 19)
+        Label5.TabIndex = 29
+        Label5.Text = "Motoboy"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label8.Location = New Point(386, 343)
-        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Location = New Point(22, 293)
         Label8.Name = "Label8"
-        Label8.Size = New Size(123, 29)
-        Label8.TabIndex = 28
-        Label8.Text = "Categoria"
+        Label8.Size = New Size(133, 19)
+        Label8.TabIndex = 31
+        Label8.Text = "Tipo do Produto"
         ' 
-        ' ComboBox2
+        ' cmb_tipo_produto
         ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(386, 375)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(203, 33)
-        ComboBox2.TabIndex = 27
+        cmb_tipo_produto.FormattingEnabled = True
+        cmb_tipo_produto.Location = New Point(23, 312)
+        cmb_tipo_produto.Name = "cmb_tipo_produto"
+        cmb_tipo_produto.Size = New Size(129, 23)
+        cmb_tipo_produto.TabIndex = 30
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label9.Location = New Point(31, 345)
-        Label9.Margin = New Padding(4, 0, 4, 0)
+        Label9.Location = New Point(166, 293)
         Label9.Name = "Label9"
-        Label9.Size = New Size(69, 29)
-        Label9.TabIndex = 30
-        Label9.Text = "Qntd"
+        Label9.Size = New Size(71, 19)
+        Label9.TabIndex = 33
+        Label9.Text = "Produto"
         ' 
-        ' TextBox1
+        ' cmb_produtos
         ' 
-        TextBox1.Location = New Point(31, 377)
-        TextBox1.Margin = New Padding(4, 5, 4, 5)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(138, 31)
-        TextBox1.TabIndex = 29
+        cmb_produtos.FormattingEnabled = True
+        cmb_produtos.Location = New Point(167, 312)
+        cmb_produtos.Name = "cmb_produtos"
+        cmb_produtos.Size = New Size(313, 23)
+        cmb_produtos.TabIndex = 32
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
+        Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label10.Location = New Point(31, 431)
-        Label10.Margin = New Padding(4, 0, 4, 0)
+        Label10.Location = New Point(21, 349)
         Label10.Name = "Label10"
-        Label10.Size = New Size(167, 29)
-        Label10.TabIndex = 32
-        Label10.Text = "Tipo da Pizza"
+        Label10.Size = New Size(97, 19)
+        Label10.TabIndex = 35
+        Label10.Text = "Quantidade"
         ' 
-        ' ComboBox3
+        ' txt_qtd
         ' 
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(31, 463)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(439, 33)
-        ComboBox3.TabIndex = 31
+        txt_qtd.Location = New Point(21, 368)
+        txt_qtd.Name = "txt_qtd"
+        txt_qtd.Size = New Size(97, 23)
+        txt_qtd.TabIndex = 34
+        ' 
+        ' btn_adicionar
+        ' 
+        btn_adicionar.BackColor = Color.Cyan
+        btn_adicionar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_adicionar.Location = New Point(21, 413)
+        btn_adicionar.Name = "btn_adicionar"
+        btn_adicionar.Size = New Size(105, 68)
+        btn_adicionar.TabIndex = 36
+        btn_adicionar.Text = "Adicionar"
+        btn_adicionar.UseVisualStyleBackColor = False
+        ' 
+        ' dgv_itens
+        ' 
+        dgv_itens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgv_itens.Location = New Point(519, 12)
+        dgv_itens.Name = "dgv_itens"
+        dgv_itens.Size = New Size(639, 494)
+        dgv_itens.TabIndex = 37
+        ' 
+        ' lbl_subtotal
+        ' 
+        lbl_subtotal.AutoSize = True
+        lbl_subtotal.BackColor = Color.Transparent
+        lbl_subtotal.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbl_subtotal.Location = New Point(167, 368)
+        lbl_subtotal.Name = "lbl_subtotal"
+        lbl_subtotal.Size = New Size(73, 24)
+        lbl_subtotal.TabIndex = 38
+        lbl_subtotal.Text = "---------"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.BackColor = Color.Transparent
+        Label11.Font = New Font("Arial", 12F, FontStyle.Bold)
+        Label11.Location = New Point(166, 349)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(73, 19)
+        Label11.TabIndex = 39
+        Label11.Text = "Subtotal"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.BackColor = Color.Transparent
+        Label12.Font = New Font("Arial", 12F, FontStyle.Bold)
+        Label12.Location = New Point(286, 349)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(46, 19)
+        Label12.TabIndex = 41
+        Label12.Text = "Total"
+        ' 
+        ' lbl_total_final
+        ' 
+        lbl_total_final.AutoSize = True
+        lbl_total_final.BackColor = Color.Transparent
+        lbl_total_final.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbl_total_final.Location = New Point(287, 368)
+        lbl_total_final.Name = "lbl_total_final"
+        lbl_total_final.Size = New Size(73, 24)
+        lbl_total_final.TabIndex = 40
+        lbl_total_final.Text = "---------"
+        ' 
+        ' btn_finalizar
+        ' 
+        btn_finalizar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_finalizar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_finalizar.Location = New Point(166, 413)
+        btn_finalizar.Name = "btn_finalizar"
+        btn_finalizar.Size = New Size(109, 68)
+        btn_finalizar.TabIndex = 42
+        btn_finalizar.Text = "Finalizar"
+        btn_finalizar.UseVisualStyleBackColor = False
         ' 
         ' frm_pedidos
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.background
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(746, 632)
+        ClientSize = New Size(1170, 518)
+        Controls.Add(btn_finalizar)
+        Controls.Add(Label12)
+        Controls.Add(lbl_total_final)
+        Controls.Add(Label11)
+        Controls.Add(lbl_subtotal)
+        Controls.Add(dgv_itens)
+        Controls.Add(btn_adicionar)
         Controls.Add(Label10)
-        Controls.Add(ComboBox3)
+        Controls.Add(txt_qtd)
         Controls.Add(Label9)
-        Controls.Add(TextBox1)
+        Controls.Add(cmb_produtos)
         Controls.Add(Label8)
-        Controls.Add(ComboBox2)
+        Controls.Add(cmb_tipo_produto)
         Controls.Add(Label5)
-        Controls.Add(ComboBox1)
+        Controls.Add(cmb_motoboy)
+        Controls.Add(rdb_salao)
+        Controls.Add(rdb_retirada)
+        Controls.Add(rdb_entrega)
         Controls.Add(Label6)
-        Controls.Add(MaskedTextBox1)
+        Controls.Add(txt_taxa_entrega)
         Controls.Add(Label7)
         Controls.Add(Label4)
         Controls.Add(txt_bairro)
         Controls.Add(Label3)
         Controls.Add(txt_endereco)
         Controls.Add(Label2)
-        Controls.Add(txt_fone)
-        Controls.Add(txt_nome)
+        Controls.Add(txt_telefone)
+        Controls.Add(txt_nome_cliente)
         Controls.Add(Label1)
-        Margin = New Padding(4, 5, 4, 5)
         Name = "frm_pedidos"
         Text = "Pedidos"
+        CType(dgv_itens, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -265,18 +392,28 @@ Partial Class frm_pedidos
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_endereco As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txt_fone As MaskedTextBox
-    Friend WithEvents txt_nome As TextBox
+    Friend WithEvents txt_telefone As MaskedTextBox
+    Friend WithEvents txt_nome_cliente As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txt_taxa_entrega As MaskedTextBox
+    Friend WithEvents rdb_entrega As RadioButton
+    Friend WithEvents rdb_retirada As RadioButton
+    Friend WithEvents rdb_salao As RadioButton
+    Friend WithEvents cmb_motoboy As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cmb_tipo_produto As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cmb_produtos As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents txt_qtd As TextBox
+    Friend WithEvents btn_adicionar As Button
+    Friend WithEvents dgv_itens As DataGridView
+    Friend WithEvents lbl_subtotal As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents lbl_total_final As Label
+    Friend WithEvents btn_finalizar As Button
 End Class
