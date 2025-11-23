@@ -30,6 +30,8 @@ Partial Class frm_menu
         Button2 = New Button()
         Button3 = New Button()
         Button4 = New Button()
+        Button5 = New Button()
+        btn_lancar = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -59,7 +61,7 @@ Partial Class frm_menu
         ' 
         btn_motoboys.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         btn_motoboys.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_motoboys.Location = New Point(12, 140)
+        btn_motoboys.Location = New Point(12, 131)
         btn_motoboys.Name = "btn_motoboys"
         btn_motoboys.Size = New Size(111, 76)
         btn_motoboys.TabIndex = 17
@@ -70,7 +72,7 @@ Partial Class frm_menu
         ' 
         Button1.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         Button1.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(12, 232)
+        Button1.Location = New Point(12, 213)
         Button1.Name = "Button1"
         Button1.Size = New Size(111, 76)
         Button1.TabIndex = 18
@@ -92,7 +94,7 @@ Partial Class frm_menu
         ' 
         Button3.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         Button3.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(140, 140)
+        Button3.Location = New Point(140, 131)
         Button3.Name = "Button3"
         Button3.Size = New Size(111, 76)
         Button3.TabIndex = 20
@@ -103,12 +105,34 @@ Partial Class frm_menu
         ' 
         Button4.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         Button4.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(140, 232)
+        Button4.Location = New Point(140, 213)
         Button4.Name = "Button4"
         Button4.Size = New Size(111, 76)
         Button4.TabIndex = 21
         Button4.Text = "Gráficos"
         Button4.UseVisualStyleBackColor = False
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Button5.Font = New Font("Arial Black", 9F, FontStyle.Bold)
+        Button5.Location = New Point(12, 295)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(111, 76)
+        Button5.TabIndex = 22
+        Button5.Text = "Fornecedores"
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' btn_lancar
+        ' 
+        btn_lancar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_lancar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_lancar.Location = New Point(140, 298)
+        btn_lancar.Name = "btn_lancar"
+        btn_lancar.Size = New Size(109, 73)
+        btn_lancar.TabIndex = 47
+        btn_lancar.Text = "Lançar Despesa"
+        btn_lancar.UseVisualStyleBackColor = False
         ' 
         ' frm_menu
         ' 
@@ -117,7 +141,9 @@ Partial Class frm_menu
         BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(545, 360)
+        ClientSize = New Size(545, 443)
+        Controls.Add(btn_lancar)
+        Controls.Add(Button5)
         Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(Button2)
@@ -138,4 +164,6 @@ Partial Class frm_menu
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents btn_lancar As Button
 End Class

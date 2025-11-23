@@ -51,6 +51,8 @@ Partial Class frm_pedidos
         Label12 = New Label()
         lbl_total_final = New Label()
         btn_finalizar = New Button()
+        Label13 = New Label()
+        cmb_pagamento = New ComboBox()
         CType(dgv_itens, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -338,12 +340,32 @@ Partial Class frm_pedidos
         ' 
         btn_finalizar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         btn_finalizar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_finalizar.Location = New Point(166, 413)
+        btn_finalizar.Location = New Point(140, 413)
         btn_finalizar.Name = "btn_finalizar"
         btn_finalizar.Size = New Size(109, 68)
         btn_finalizar.TabIndex = 42
         btn_finalizar.Text = "Finalizar"
         btn_finalizar.UseVisualStyleBackColor = False
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.BackColor = Color.Transparent
+        Label13.Font = New Font("Arial", 12F, FontStyle.Bold)
+        Label13.Location = New Point(261, 413)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(172, 19)
+        Label13.TabIndex = 44
+        Label13.Text = "Forma de Pagamento"
+        ' 
+        ' cmb_pagamento
+        ' 
+        cmb_pagamento.DropDownStyle = ComboBoxStyle.DropDownList
+        cmb_pagamento.FormattingEnabled = True
+        cmb_pagamento.Location = New Point(262, 432)
+        cmb_pagamento.Name = "cmb_pagamento"
+        cmb_pagamento.Size = New Size(197, 23)
+        cmb_pagamento.TabIndex = 43
         ' 
         ' frm_pedidos
         ' 
@@ -352,6 +374,8 @@ Partial Class frm_pedidos
         BackgroundImage = My.Resources.Resources.background
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1170, 518)
+        Controls.Add(Label13)
+        Controls.Add(cmb_pagamento)
         Controls.Add(btn_finalizar)
         Controls.Add(Label12)
         Controls.Add(lbl_total_final)
@@ -416,4 +440,6 @@ Partial Class frm_pedidos
     Friend WithEvents Label12 As Label
     Friend WithEvents lbl_total_final As Label
     Friend WithEvents btn_finalizar As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents cmb_pagamento As ComboBox
 End Class

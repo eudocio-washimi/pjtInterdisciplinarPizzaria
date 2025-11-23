@@ -29,7 +29,17 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        frm_graficos.Show()
+        frm_graficos.Show
+        Hide
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        frm_cad_fornecedores.Show()
+        Hide
+    End Sub
+
+    Private Sub btn_lancar_Click(sender As Object, e As EventArgs) Handles btn_lancar.Click
+        frm_gastos.Show()
         Hide()
     End Sub
 End Class
