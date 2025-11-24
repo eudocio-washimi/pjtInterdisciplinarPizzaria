@@ -36,17 +36,19 @@ Partial Class frm_cad_fornecedores
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label2.Location = New Point(75, 20)
+        Label2.Location = New Point(107, 33)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(171, 19)
+        Label2.Size = New Size(255, 29)
         Label2.TabIndex = 19
         Label2.Text = "Nome do Fornecedor"
         ' 
         ' txt_nome
         ' 
-        txt_nome.Location = New Point(75, 39)
+        txt_nome.Location = New Point(107, 65)
+        txt_nome.Margin = New Padding(4, 5, 4, 5)
         txt_nome.Name = "txt_nome"
-        txt_nome.Size = New Size(340, 23)
+        txt_nome.Size = New Size(484, 31)
         txt_nome.TabIndex = 18
         ' 
         ' Label5
@@ -54,9 +56,10 @@ Partial Class frm_cad_fornecedores
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label5.Location = New Point(75, 74)
+        Label5.Location = New Point(107, 123)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(159, 19)
+        Label5.Size = New Size(239, 29)
         Label5.TabIndex = 31
         Label5.Text = "Tipo de Fornecedor"
         ' 
@@ -64,18 +67,20 @@ Partial Class frm_cad_fornecedores
         ' 
         cmb_tipo.FormattingEnabled = True
         cmb_tipo.Items.AddRange(New Object() {"Mercado", "Serviço Público", "Funcionário", "Manutenção", "Outros"})
-        cmb_tipo.Location = New Point(76, 93)
+        cmb_tipo.Location = New Point(109, 155)
+        cmb_tipo.Margin = New Padding(4, 5, 4, 5)
         cmb_tipo.Name = "cmb_tipo"
-        cmb_tipo.Size = New Size(158, 23)
+        cmb_tipo.Size = New Size(224, 33)
         cmb_tipo.TabIndex = 30
         ' 
         ' btn_salvar
         ' 
         btn_salvar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         btn_salvar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_salvar.Location = New Point(256, 68)
+        btn_salvar.Location = New Point(366, 113)
+        btn_salvar.Margin = New Padding(4, 5, 4, 5)
         btn_salvar.Name = "btn_salvar"
-        btn_salvar.Size = New Size(109, 68)
+        btn_salvar.Size = New Size(156, 113)
         btn_salvar.TabIndex = 43
         btn_salvar.Text = "Salvar"
         btn_salvar.UseVisualStyleBackColor = False
@@ -83,24 +88,27 @@ Partial Class frm_cad_fornecedores
         ' dgv_fornecedores
         ' 
         dgv_fornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgv_fornecedores.Location = New Point(12, 151)
+        dgv_fornecedores.Location = New Point(17, 252)
+        dgv_fornecedores.Margin = New Padding(4, 5, 4, 5)
         dgv_fornecedores.Name = "dgv_fornecedores"
-        dgv_fornecedores.Size = New Size(469, 287)
+        dgv_fornecedores.RowHeadersWidth = 62
+        dgv_fornecedores.Size = New Size(670, 478)
         dgv_fornecedores.TabIndex = 44
         ' 
         ' frm_cad_fornecedores
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.background
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(493, 450)
+        ClientSize = New Size(704, 750)
         Controls.Add(dgv_fornecedores)
         Controls.Add(btn_salvar)
         Controls.Add(Label5)
         Controls.Add(cmb_tipo)
         Controls.Add(Label2)
         Controls.Add(txt_nome)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "frm_cad_fornecedores"
         Text = "frm_cad_fornecedores"
         CType(dgv_fornecedores, ComponentModel.ISupportInitialize).EndInit()

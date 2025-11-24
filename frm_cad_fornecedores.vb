@@ -91,4 +91,8 @@
     Private Sub frm_cad_fornecedores_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         frm_menu.Show()
     End Sub
+
+    Private Sub cmb_tipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tipo.SelectedIndexChanged
+
+    End Sub
 End Class

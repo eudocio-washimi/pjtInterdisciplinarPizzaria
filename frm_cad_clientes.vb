@@ -8,7 +8,7 @@
                 db.Execute(UCase(sql))
                 MsgBox("Dados alterados com sucesso!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "ATENÇÃO")
             Else
-                Dim taxa As String = txt_taxa.Text.Replace("R$", "").Replace("$", "").Replace("_", "").Trim()
+                Dim taxa = txt_taxa.Text.Replace("R$", "").Replace("$", "").Replace("_", "").Trim
                 taxa = taxa.Replace(".", ",")
 
                 sql = $"INSERT INTO tb_clientes (fone, nome, endereco, bairro, taxa) VALUES 
@@ -59,6 +59,11 @@
     End Sub
 
     Private Sub frm_cad_clientes_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_menu.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_voltar.Click
+        Me.Hide()
         frm_menu.Show()
     End Sub
 End Class
