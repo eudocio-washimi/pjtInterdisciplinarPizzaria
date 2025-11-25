@@ -30,6 +30,9 @@ Partial Class frm_graficos
         lbl_status = New Label()
         pic_grafico = New PictureBox()
         btn_faturamento = New Button()
+        btn_lucro = New Button()
+        btn_pagamentos = New Button()
+        btn_gastos_tipo = New Button()
         CType(pic_grafico, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -93,7 +96,7 @@ Partial Class frm_graficos
         lbl_status.AutoSize = True
         lbl_status.BackColor = Color.Transparent
         lbl_status.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lbl_status.Location = New Point(713, 34)
+        lbl_status.Location = New Point(775, 107)
         lbl_status.Name = "lbl_status"
         lbl_status.Size = New Size(322, 22)
         lbl_status.TabIndex = 47
@@ -102,9 +105,9 @@ Partial Class frm_graficos
         ' pic_grafico
         ' 
         pic_grafico.BackgroundImageLayout = ImageLayout.None
-        pic_grafico.Location = New Point(12, 86)
+        pic_grafico.Location = New Point(12, 168)
         pic_grafico.Name = "pic_grafico"
-        pic_grafico.Size = New Size(1023, 477)
+        pic_grafico.Size = New Size(1281, 619)
         pic_grafico.SizeMode = PictureBoxSizeMode.Zoom
         pic_grafico.TabIndex = 48
         pic_grafico.TabStop = False
@@ -120,11 +123,49 @@ Partial Class frm_graficos
         btn_faturamento.Text = "Faturamento"
         btn_faturamento.UseVisualStyleBackColor = False
         ' 
+        ' btn_lucro
+        ' 
+        btn_lucro.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_lucro.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_lucro.Location = New Point(713, 12)
+        btn_lucro.Name = "btn_lucro"
+        btn_lucro.Size = New Size(105, 68)
+        btn_lucro.TabIndex = 50
+        btn_lucro.Text = "Fluxo de Caixa"
+        btn_lucro.UseVisualStyleBackColor = False
+        ' 
+        ' btn_pagamentos
+        ' 
+        btn_pagamentos.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_pagamentos.Font = New Font("Arial Black", 10F, FontStyle.Bold)
+        btn_pagamentos.Location = New Point(824, 12)
+        btn_pagamentos.Name = "btn_pagamentos"
+        btn_pagamentos.Size = New Size(105, 68)
+        btn_pagamentos.TabIndex = 51
+        btn_pagamentos.Text = "Meios de Pagamento"
+        btn_pagamentos.UseVisualStyleBackColor = False
+        ' 
+        ' btn_gastos_tipo
+        ' 
+        btn_gastos_tipo.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_gastos_tipo.Font = New Font("Arial Black", 10F, FontStyle.Bold)
+        btn_gastos_tipo.Location = New Point(469, 86)
+        btn_gastos_tipo.Name = "btn_gastos_tipo"
+        btn_gastos_tipo.Size = New Size(105, 68)
+        btn_gastos_tipo.TabIndex = 52
+        btn_gastos_tipo.Text = "Despesas"
+        btn_gastos_tipo.UseVisualStyleBackColor = False
+        ' 
         ' frm_graficos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1047, 575)
+        BackgroundImage = My.Resources.Resources.background
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(1305, 799)
+        Controls.Add(btn_gastos_tipo)
+        Controls.Add(btn_pagamentos)
+        Controls.Add(btn_lucro)
         Controls.Add(btn_faturamento)
         Controls.Add(pic_grafico)
         Controls.Add(lbl_status)
@@ -135,6 +176,7 @@ Partial Class frm_graficos
         Controls.Add(btn_bairros)
         Name = "frm_graficos"
         Text = "frm_graficos"
+        WindowState = FormWindowState.Maximized
         CType(pic_grafico, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -148,4 +190,7 @@ Partial Class frm_graficos
     Friend WithEvents lbl_status As Label
     Friend WithEvents pic_grafico As PictureBox
     Friend WithEvents btn_faturamento As Button
+    Friend WithEvents btn_lucro As Button
+    Friend WithEvents btn_pagamentos As Button
+    Friend WithEvents btn_gastos_tipo As Button
 End Class

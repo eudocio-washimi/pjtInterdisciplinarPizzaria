@@ -24,7 +24,6 @@ Partial Class frm_menu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu))
         btn_gravar = New Button()
-        PictureBox1 = New PictureBox()
         btn_motoboys = New Button()
         Button1 = New Button()
         Button2 = New Button()
@@ -32,7 +31,13 @@ Partial Class frm_menu
         Button4 = New Button()
         Button5 = New Button()
         btn_lancar = New Button()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        MenuStrip1 = New MenuStrip()
+        CADASTRODECLIENTESToolStripMenuItem = New ToolStripMenuItem()
+        CADASTRODEMOTOBOYSToolStripMenuItem = New ToolStripMenuItem()
+        CADASTRODEPRODUTOSToolStripMenuItem = New ToolStripMenuItem()
+        CAToolStripMenuItem = New ToolStripMenuItem()
+        btn_agendar = New Button()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' btn_gravar
@@ -45,17 +50,6 @@ Partial Class frm_menu
         btn_gravar.TabIndex = 15
         btn_gravar.Text = "Cadastro de Clientes"
         btn_gravar.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.Transparent
-        PictureBox1.Image = My.Resources.Resources.gatoFelixPizzaiolo
-        PictureBox1.Location = New Point(257, 49)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(286, 276)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 16
-        PictureBox1.TabStop = False
         ' 
         ' btn_motoboys
         ' 
@@ -134,6 +128,50 @@ Partial Class frm_menu
         btn_lancar.Text = "Lançar Despesa"
         btn_lancar.UseVisualStyleBackColor = False
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {CADASTRODECLIENTESToolStripMenuItem, CADASTRODEMOTOBOYSToolStripMenuItem, CADASTRODEPRODUTOSToolStripMenuItem, CAToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(1864, 24)
+        MenuStrip1.TabIndex = 48
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' CADASTRODECLIENTESToolStripMenuItem
+        ' 
+        CADASTRODECLIENTESToolStripMenuItem.Name = "CADASTRODECLIENTESToolStripMenuItem"
+        CADASTRODECLIENTESToolStripMenuItem.Size = New Size(151, 20)
+        CADASTRODECLIENTESToolStripMenuItem.Text = "CADASTRO DE &CLIENTES"
+        ' 
+        ' CADASTRODEMOTOBOYSToolStripMenuItem
+        ' 
+        CADASTRODEMOTOBOYSToolStripMenuItem.Name = "CADASTRODEMOTOBOYSToolStripMenuItem"
+        CADASTRODEMOTOBOYSToolStripMenuItem.Size = New Size(163, 20)
+        CADASTRODEMOTOBOYSToolStripMenuItem.Text = "CADASTRO DE &MOTOBOYS"
+        ' 
+        ' CADASTRODEPRODUTOSToolStripMenuItem
+        ' 
+        CADASTRODEPRODUTOSToolStripMenuItem.Name = "CADASTRODEPRODUTOSToolStripMenuItem"
+        CADASTRODEPRODUTOSToolStripMenuItem.Size = New Size(160, 20)
+        CADASTRODEPRODUTOSToolStripMenuItem.Text = "CADASTRO DE &PRODUTOS"
+        ' 
+        ' CAToolStripMenuItem
+        ' 
+        CAToolStripMenuItem.Name = "CAToolStripMenuItem"
+        CAToolStripMenuItem.Size = New Size(187, 20)
+        CAToolStripMenuItem.Text = "CADASTRO DE FORNECEDORES"
+        ' 
+        ' btn_agendar
+        ' 
+        btn_agendar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_agendar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_agendar.Location = New Point(73, 386)
+        btn_agendar.Name = "btn_agendar"
+        btn_agendar.Size = New Size(109, 68)
+        btn_agendar.TabIndex = 51
+        btn_agendar.Text = "Agendar"
+        btn_agendar.UseVisualStyleBackColor = False
+        ' 
         ' frm_menu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -141,7 +179,8 @@ Partial Class frm_menu
         BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(545, 443)
+        ClientSize = New Size(1864, 891)
+        Controls.Add(btn_agendar)
         Controls.Add(btn_lancar)
         Controls.Add(Button5)
         Controls.Add(Button4)
@@ -149,16 +188,19 @@ Partial Class frm_menu
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(btn_motoboys)
-        Controls.Add(PictureBox1)
         Controls.Add(btn_gravar)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         Name = "frm_menu"
         Text = "menu"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        WindowState = FormWindowState.Maximized
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btn_gravar As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btn_motoboys As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
@@ -166,4 +208,10 @@ Partial Class frm_menu
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents btn_lancar As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents CADASTRODECLIENTESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CADASTRODEMOTOBOYSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CADASTRODEPRODUTOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CAToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_agendar As Button
 End Class

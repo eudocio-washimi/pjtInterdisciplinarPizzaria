@@ -42,4 +42,13 @@
         frm_gastos.Show()
         Hide()
     End Sub
+
+    Private Sub CADASTRODECLIENTESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CADASTRODECLIENTESToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub btn_agendar_Click(sender As Object, e As EventArgs) Handles btn_agendar.Click
+        frm_reservas.Show()
+        Hide()
+    End Sub
 End Class
