@@ -2,32 +2,7 @@
     Dim id_editando As String = ""
 
     Private Sub frm_cad_fornecedores_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ConfigurarGrid()
         CarregarLista()
-    End Sub
-
-    Sub ConfigurarGrid()
-        dgv_fornecedores.Columns.Clear()
-        dgv_fornecedores.Columns.Add("id", "ID")
-        dgv_fornecedores.Columns("id").Width = 40
-        dgv_fornecedores.Columns.Add("nome", "Nome")
-        dgv_fornecedores.Columns("nome").Width = 200
-        dgv_fornecedores.Columns.Add("tipo", "Tipo")
-
-        Dim btnEditar As New DataGridViewButtonColumn()
-        btnEditar.Name = "btn_editar"
-        btnEditar.HeaderText = "Editar"
-        btnEditar.Text = "Editar"
-        btnEditar.UseColumnTextForButtonValue = True
-        dgv_fornecedores.Columns.Add(btnEditar)
-
-        Dim btnExcluir As New DataGridViewButtonColumn()
-        btnExcluir.Name = "btn_excluir"
-        btnExcluir.HeaderText = "Excluir"
-        btnExcluir.Text = "X"
-        btnExcluir.UseColumnTextForButtonValue = True
-        btnExcluir.Width = 30
-        dgv_fornecedores.Columns.Add(btnExcluir)
     End Sub
 
     Sub CarregarLista()

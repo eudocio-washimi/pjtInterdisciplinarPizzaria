@@ -9,7 +9,7 @@
         Try
             'db.Open("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dir_banco)
             db.Open("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & dir_banco)
-            MsgBox("Conexão OK", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
+            'MsgBox("Conexão OK", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
         Catch ex As Exception
             MsgBox("Erro ao Conectar: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try

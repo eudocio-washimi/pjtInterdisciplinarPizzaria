@@ -53,11 +53,21 @@ Partial Class frm_pedidos
         btn_finalizar = New Button()
         Label13 = New Label()
         cmb_pagamento = New ComboBox()
+        chk_meia_pizza = New CheckBox()
+        cmb_produto2 = New ComboBox()
+        id = New DataGridViewTextBoxColumn()
+        produto = New DataGridViewTextBoxColumn()
+        qtd = New DataGridViewTextBoxColumn()
+        unitario = New DataGridViewTextBoxColumn()
+        total = New DataGridViewTextBoxColumn()
+        tipo = New DataGridViewTextBoxColumn()
+        btn_excluir = New DataGridViewImageColumn()
         CType(dgv_itens, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label4
         ' 
+        Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -69,6 +79,7 @@ Partial Class frm_pedidos
         ' 
         ' txt_bairro
         ' 
+        txt_bairro.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         txt_bairro.Location = New Point(339, 102)
         txt_bairro.Name = "txt_bairro"
         txt_bairro.Size = New Size(141, 23)
@@ -76,6 +87,7 @@ Partial Class frm_pedidos
         ' 
         ' Label3
         ' 
+        Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -87,6 +99,7 @@ Partial Class frm_pedidos
         ' 
         ' txt_endereco
         ' 
+        txt_endereco.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         txt_endereco.Location = New Point(22, 102)
         txt_endereco.Name = "txt_endereco"
         txt_endereco.Size = New Size(305, 23)
@@ -94,6 +107,7 @@ Partial Class frm_pedidos
         ' 
         ' Label2
         ' 
+        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -105,6 +119,7 @@ Partial Class frm_pedidos
         ' 
         ' txt_telefone
         ' 
+        txt_telefone.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         txt_telefone.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txt_telefone.Location = New Point(22, 39)
         txt_telefone.Mask = "(99) 00000-0000"
@@ -114,6 +129,7 @@ Partial Class frm_pedidos
         ' 
         ' txt_nome_cliente
         ' 
+        txt_nome_cliente.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         txt_nome_cliente.Location = New Point(140, 40)
         txt_nome_cliente.Name = "txt_nome_cliente"
         txt_nome_cliente.Size = New Size(340, 23)
@@ -121,6 +137,7 @@ Partial Class frm_pedidos
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -141,6 +158,7 @@ Partial Class frm_pedidos
         ' 
         ' Label7
         ' 
+        Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -152,6 +170,7 @@ Partial Class frm_pedidos
         ' 
         ' txt_taxa_entrega
         ' 
+        txt_taxa_entrega.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         txt_taxa_entrega.Font = New Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         txt_taxa_entrega.Location = New Point(166, 226)
         txt_taxa_entrega.Mask = "$ 99,00"
@@ -161,6 +180,7 @@ Partial Class frm_pedidos
         ' 
         ' rdb_entrega
         ' 
+        rdb_entrega.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         rdb_entrega.AutoSize = True
         rdb_entrega.BackColor = Color.Transparent
         rdb_entrega.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -174,6 +194,7 @@ Partial Class frm_pedidos
         ' 
         ' rdb_retirada
         ' 
+        rdb_retirada.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         rdb_retirada.AutoSize = True
         rdb_retirada.BackColor = Color.Transparent
         rdb_retirada.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -187,6 +208,7 @@ Partial Class frm_pedidos
         ' 
         ' rdb_salao
         ' 
+        rdb_salao.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         rdb_salao.AutoSize = True
         rdb_salao.BackColor = Color.Transparent
         rdb_salao.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -200,6 +222,7 @@ Partial Class frm_pedidos
         ' 
         ' cmb_motoboy
         ' 
+        cmb_motoboy.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         cmb_motoboy.FormattingEnabled = True
         cmb_motoboy.Location = New Point(22, 226)
         cmb_motoboy.Name = "cmb_motoboy"
@@ -208,6 +231,7 @@ Partial Class frm_pedidos
         ' 
         ' Label5
         ' 
+        Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -219,6 +243,7 @@ Partial Class frm_pedidos
         ' 
         ' Label8
         ' 
+        Label8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
         Label8.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -230,7 +255,9 @@ Partial Class frm_pedidos
         ' 
         ' cmb_tipo_produto
         ' 
+        cmb_tipo_produto.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         cmb_tipo_produto.FormattingEnabled = True
+        cmb_tipo_produto.Items.AddRange(New Object() {"Pizza", "Catito", "Bebida"})
         cmb_tipo_produto.Location = New Point(23, 312)
         cmb_tipo_produto.Name = "cmb_tipo_produto"
         cmb_tipo_produto.Size = New Size(129, 23)
@@ -238,6 +265,7 @@ Partial Class frm_pedidos
         ' 
         ' Label9
         ' 
+        Label9.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -249,6 +277,7 @@ Partial Class frm_pedidos
         ' 
         ' cmb_produtos
         ' 
+        cmb_produtos.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         cmb_produtos.FormattingEnabled = True
         cmb_produtos.Location = New Point(167, 312)
         cmb_produtos.Name = "cmb_produtos"
@@ -257,10 +286,11 @@ Partial Class frm_pedidos
         ' 
         ' Label10
         ' 
+        Label10.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
         Label10.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label10.Location = New Point(21, 349)
+        Label10.Location = New Point(21, 387)
         Label10.Name = "Label10"
         Label10.Size = New Size(97, 19)
         Label10.TabIndex = 35
@@ -268,16 +298,18 @@ Partial Class frm_pedidos
         ' 
         ' txt_qtd
         ' 
-        txt_qtd.Location = New Point(21, 368)
+        txt_qtd.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        txt_qtd.Location = New Point(21, 406)
         txt_qtd.Name = "txt_qtd"
         txt_qtd.Size = New Size(97, 23)
         txt_qtd.TabIndex = 34
         ' 
         ' btn_adicionar
         ' 
-        btn_adicionar.BackColor = Color.Cyan
+        btn_adicionar.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        btn_adicionar.FlatStyle = FlatStyle.Flat
         btn_adicionar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_adicionar.Location = New Point(21, 413)
+        btn_adicionar.Location = New Point(21, 451)
         btn_adicionar.Name = "btn_adicionar"
         btn_adicionar.Size = New Size(105, 68)
         btn_adicionar.TabIndex = 36
@@ -286,18 +318,22 @@ Partial Class frm_pedidos
         ' 
         ' dgv_itens
         ' 
+        dgv_itens.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgv_itens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgv_itens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgv_itens.Columns.AddRange(New DataGridViewColumn() {id, produto, qtd, unitario, total, tipo, btn_excluir})
         dgv_itens.Location = New Point(519, 12)
         dgv_itens.Name = "dgv_itens"
-        dgv_itens.Size = New Size(639, 494)
+        dgv_itens.Size = New Size(639, 554)
         dgv_itens.TabIndex = 37
         ' 
         ' lbl_subtotal
         ' 
+        lbl_subtotal.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         lbl_subtotal.AutoSize = True
         lbl_subtotal.BackColor = Color.Transparent
         lbl_subtotal.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lbl_subtotal.Location = New Point(167, 368)
+        lbl_subtotal.Location = New Point(167, 406)
         lbl_subtotal.Name = "lbl_subtotal"
         lbl_subtotal.Size = New Size(73, 24)
         lbl_subtotal.TabIndex = 38
@@ -305,10 +341,11 @@ Partial Class frm_pedidos
         ' 
         ' Label11
         ' 
+        Label11.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label11.AutoSize = True
         Label11.BackColor = Color.Transparent
         Label11.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label11.Location = New Point(166, 349)
+        Label11.Location = New Point(166, 387)
         Label11.Name = "Label11"
         Label11.Size = New Size(73, 19)
         Label11.TabIndex = 39
@@ -316,10 +353,11 @@ Partial Class frm_pedidos
         ' 
         ' Label12
         ' 
+        Label12.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label12.AutoSize = True
         Label12.BackColor = Color.Transparent
         Label12.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label12.Location = New Point(286, 349)
+        Label12.Location = New Point(286, 387)
         Label12.Name = "Label12"
         Label12.Size = New Size(46, 19)
         Label12.TabIndex = 41
@@ -327,10 +365,11 @@ Partial Class frm_pedidos
         ' 
         ' lbl_total_final
         ' 
+        lbl_total_final.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         lbl_total_final.AutoSize = True
         lbl_total_final.BackColor = Color.Transparent
         lbl_total_final.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lbl_total_final.Location = New Point(287, 368)
+        lbl_total_final.Location = New Point(287, 406)
         lbl_total_final.Name = "lbl_total_final"
         lbl_total_final.Size = New Size(73, 24)
         lbl_total_final.TabIndex = 40
@@ -338,9 +377,10 @@ Partial Class frm_pedidos
         ' 
         ' btn_finalizar
         ' 
-        btn_finalizar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_finalizar.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        btn_finalizar.FlatStyle = FlatStyle.Flat
         btn_finalizar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_finalizar.Location = New Point(140, 413)
+        btn_finalizar.Location = New Point(140, 451)
         btn_finalizar.Name = "btn_finalizar"
         btn_finalizar.Size = New Size(109, 68)
         btn_finalizar.TabIndex = 42
@@ -349,10 +389,11 @@ Partial Class frm_pedidos
         ' 
         ' Label13
         ' 
+        Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Label13.AutoSize = True
         Label13.BackColor = Color.Transparent
         Label13.Font = New Font("Arial", 12F, FontStyle.Bold)
-        Label13.Location = New Point(261, 413)
+        Label13.Location = New Point(261, 451)
         Label13.Name = "Label13"
         Label13.Size = New Size(172, 19)
         Label13.TabIndex = 44
@@ -360,20 +401,83 @@ Partial Class frm_pedidos
         ' 
         ' cmb_pagamento
         ' 
+        cmb_pagamento.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         cmb_pagamento.DropDownStyle = ComboBoxStyle.DropDownList
         cmb_pagamento.FormattingEnabled = True
-        cmb_pagamento.Location = New Point(262, 432)
+        cmb_pagamento.Items.AddRange(New Object() {"DINHEIRO", "PIX", "CARTÃO DÉBITO", "CARTÃO CRÉDITO"})
+        cmb_pagamento.Location = New Point(262, 470)
         cmb_pagamento.Name = "cmb_pagamento"
         cmb_pagamento.Size = New Size(197, 23)
         cmb_pagamento.TabIndex = 43
+        ' 
+        ' chk_meia_pizza
+        ' 
+        chk_meia_pizza.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        chk_meia_pizza.AutoSize = True
+        chk_meia_pizza.BackColor = Color.Transparent
+        chk_meia_pizza.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        chk_meia_pizza.Location = New Point(23, 342)
+        chk_meia_pizza.Name = "chk_meia_pizza"
+        chk_meia_pizza.Size = New Size(111, 22)
+        chk_meia_pizza.TabIndex = 53
+        chk_meia_pizza.Text = "Meia a Meia"
+        chk_meia_pizza.UseVisualStyleBackColor = False
+        ' 
+        ' cmb_produto2
+        ' 
+        cmb_produto2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        cmb_produto2.FormattingEnabled = True
+        cmb_produto2.Location = New Point(167, 341)
+        cmb_produto2.Name = "cmb_produto2"
+        cmb_produto2.Size = New Size(313, 23)
+        cmb_produto2.TabIndex = 54
+        ' 
+        ' id
+        ' 
+        id.HeaderText = "Cód"
+        id.Name = "id"
+        ' 
+        ' produto
+        ' 
+        produto.HeaderText = "Produto"
+        produto.Name = "produto"
+        ' 
+        ' qtd
+        ' 
+        qtd.HeaderText = "Qtd"
+        qtd.Name = "qtd"
+        ' 
+        ' unitario
+        ' 
+        unitario.HeaderText = "Unit"
+        unitario.Name = "unitario"
+        ' 
+        ' total
+        ' 
+        total.HeaderText = "Total"
+        total.Name = "total"
+        ' 
+        ' tipo
+        ' 
+        tipo.HeaderText = "Tipo"
+        tipo.Name = "tipo"
+        tipo.Visible = False
+        ' 
+        ' btn_excluir
+        ' 
+        btn_excluir.HeaderText = "Excluir"
+        btn_excluir.Image = My.Resources.Resources.deletar
+        btn_excluir.Name = "btn_excluir"
         ' 
         ' frm_pedidos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.background
+        BackColor = Color.FromArgb(CByte(95), CByte(99), CByte(104))
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1170, 518)
+        ClientSize = New Size(1170, 578)
+        Controls.Add(cmb_produto2)
+        Controls.Add(chk_meia_pizza)
         Controls.Add(Label13)
         Controls.Add(cmb_pagamento)
         Controls.Add(btn_finalizar)
@@ -442,4 +546,13 @@ Partial Class frm_pedidos
     Friend WithEvents btn_finalizar As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents cmb_pagamento As ComboBox
+    Friend WithEvents chk_meia_pizza As CheckBox
+    Friend WithEvents cmb_produto2 As ComboBox
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents produto As DataGridViewTextBoxColumn
+    Friend WithEvents qtd As DataGridViewTextBoxColumn
+    Friend WithEvents unitario As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
+    Friend WithEvents tipo As DataGridViewTextBoxColumn
+    Friend WithEvents btn_excluir As DataGridViewImageColumn
 End Class

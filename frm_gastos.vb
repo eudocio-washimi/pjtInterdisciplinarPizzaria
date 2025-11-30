@@ -1,7 +1,5 @@
 ﻿Public Class frm_gastos
     Dim id_editando As String = ""
-
-    ' Variável para evitar loop infinito na formatação
     Dim isEditing As Boolean = False
 
     Private Sub frm_gastos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,25 +10,20 @@
         limpar_campos()
     End Sub
 
-    ' --- FORMATAÇÃO MONETÁRIA DINÂMICA ---
     Private Sub txt_valor_TextChanged(sender As Object, e As EventArgs) Handles txt_valor.TextChanged
         If isEditing Then Exit Sub
         isEditing = True
 
         Try
-            ' 1. Remove tudo que não é número
             Dim textoLimpo As String = System.Text.RegularExpressions.Regex.Replace(txt_valor.Text, "[^0-9]", "")
 
             If textoLimpo = "" Then
                 txt_valor.Text = "R$ 0,00"
             Else
-                ' 2. Converte para valor (divide por 100 para ter os centavos)
                 Dim valor As Double = CDbl(textoLimpo) / 100
-                ' 3. Formata como moeda (R$ 1.234,56)
                 txt_valor.Text = FormatCurrency(valor)
             End If
 
-            ' 4. Coloca o cursor no final
             txt_valor.SelectionStart = txt_valor.Text.Length
 
         Catch ex As Exception
@@ -39,13 +32,11 @@
         isEditing = False
     End Sub
 
-    ' Garante que só entra número no KeyPress (backup de segurança)
     Private Sub txt_valor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_valor.KeyPress
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
         End If
     End Sub
-    ' ---------------------------------------
 
     Sub ConfigurarGrid()
         dgv_historico.Columns.Clear()
@@ -122,7 +113,7 @@
 
     Sub limpar_campos()
         txt_descricao.Clear()
-        txt_valor.Text = "R$ 0,00" ' Inicia formatado
+        txt_valor.Text = "R$ 0,00"
         cmb_fornecedor.SelectedIndex = -1
         dtp_data.Value = Date.Now
         rdb_variavel.Checked = True
@@ -132,14 +123,10 @@
 
     Function TextoParaValor(texto As String) As Double
         If String.IsNullOrWhiteSpace(texto) Then Return 0
-        ' Lógica para extrair valor do formato R$ 1.234,56
         Dim limpo As String = texto.Replace("R$", "").Replace(" ", "").Trim()
-        ' Se tiver ponto de milhar, tira. Se tiver virgula decimal, mantém ou trata.
-        ' O jeito mais seguro com FormatCurrency é usar o próprio CDbl do sistema
         Try
             Return CDbl(limpo)
         Catch
-            ' Fallback manual
             limpo = limpo.Replace(".", "").Replace(",", ".")
             Return Val(limpo)
         End Try
@@ -154,8 +141,6 @@
         Try
             Dim id_fornecedor As Integer = Split(cmb_fornecedor.Text, " | ")(1)
             Dim tipo As String = If(rdb_fixo.Checked, "Fixo", "Variável")
-
-            ' Extrai o valor numérico real da caixa formatada
             Dim valDouble As Double = TextoParaValor(txt_valor.Text)
             Dim valStr As String = valDouble.ToString("0.00").Replace(",", ".")
 
@@ -189,7 +174,6 @@
         If dgv_historico.Columns(e.ColumnIndex).Name = "btn_editar" Then
             txt_descricao.Text = dgv_historico.Rows(e.RowIndex).Cells("desc").Value.ToString()
 
-            ' Joga o valor formatado direto (o TextChanged vai tratar se precisar)
             Dim valStr As String = dgv_historico.Rows(e.RowIndex).Cells("valor").Value.ToString()
             txt_valor.Text = valStr
 

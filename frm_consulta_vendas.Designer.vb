@@ -22,6 +22,8 @@ Partial Class frm_consulta_vendas
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         btn_filtrar = New Button()
         Label2 = New Label()
         dtp_fim = New DateTimePicker()
@@ -35,12 +37,19 @@ Partial Class frm_consulta_vendas
         rdb_saidas = New RadioButton()
         rdb_todos = New RadioButton()
         chk_agrupar_data = New CheckBox()
+        data = New DataGridViewTextBoxColumn()
+        descricao = New DataGridViewTextBoxColumn()
+        tipo = New DataGridViewTextBoxColumn()
+        entrada = New DataGridViewTextBoxColumn()
+        saida = New DataGridViewTextBoxColumn()
         CType(dgv_financeiro, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btn_filtrar
         ' 
-        btn_filtrar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_filtrar.Anchor = AnchorStyles.Top
+        btn_filtrar.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        btn_filtrar.FlatStyle = FlatStyle.Flat
         btn_filtrar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn_filtrar.Location = New Point(391, 25)
         btn_filtrar.Name = "btn_filtrar"
@@ -51,6 +60,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' Label2
         ' 
+        Label2.Anchor = AnchorStyles.Top
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -62,6 +72,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' dtp_fim
         ' 
+        dtp_fim.Anchor = AnchorStyles.Top
         dtp_fim.Format = DateTimePickerFormat.Short
         dtp_fim.Location = New Point(236, 44)
         dtp_fim.Name = "dtp_fim"
@@ -70,6 +81,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' Label1
         ' 
+        Label1.Anchor = AnchorStyles.Top
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Arial", 12F, FontStyle.Bold)
@@ -81,6 +93,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' dtp_inicio
         ' 
+        dtp_inicio.Anchor = AnchorStyles.Top
         dtp_inicio.Format = DateTimePickerFormat.Short
         dtp_inicio.Location = New Point(79, 44)
         dtp_inicio.Name = "dtp_inicio"
@@ -89,6 +102,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' lbl_total_entradas
         ' 
+        lbl_total_entradas.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         lbl_total_entradas.AutoSize = True
         lbl_total_entradas.BackColor = Color.Transparent
         lbl_total_entradas.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -100,7 +114,10 @@ Partial Class frm_consulta_vendas
         ' 
         ' dgv_financeiro
         ' 
+        dgv_financeiro.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgv_financeiro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgv_financeiro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgv_financeiro.Columns.AddRange(New DataGridViewColumn() {data, descricao, tipo, entrada, saida})
         dgv_financeiro.Location = New Point(12, 120)
         dgv_financeiro.Name = "dgv_financeiro"
         dgv_financeiro.Size = New Size(662, 401)
@@ -108,6 +125,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' lbl_saldo_final
         ' 
+        lbl_saldo_final.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         lbl_saldo_final.AutoSize = True
         lbl_saldo_final.BackColor = Color.Transparent
         lbl_saldo_final.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -119,6 +137,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' lbl_total_saidas
         ' 
+        lbl_total_saidas.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         lbl_total_saidas.AutoSize = True
         lbl_total_saidas.BackColor = Color.Transparent
         lbl_total_saidas.Font = New Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -130,6 +149,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' rdb_entradas
         ' 
+        rdb_entradas.Anchor = AnchorStyles.Top
         rdb_entradas.AutoSize = True
         rdb_entradas.BackColor = Color.Transparent
         rdb_entradas.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -143,6 +163,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' rdb_saidas
         ' 
+        rdb_saidas.Anchor = AnchorStyles.Top
         rdb_saidas.AutoSize = True
         rdb_saidas.BackColor = Color.Transparent
         rdb_saidas.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -156,6 +177,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' rdb_todos
         ' 
+        rdb_todos.Anchor = AnchorStyles.Top
         rdb_todos.AutoSize = True
         rdb_todos.BackColor = Color.Transparent
         rdb_todos.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -169,6 +191,7 @@ Partial Class frm_consulta_vendas
         ' 
         ' chk_agrupar_data
         ' 
+        chk_agrupar_data.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         chk_agrupar_data.AutoSize = True
         chk_agrupar_data.BackColor = Color.Transparent
         chk_agrupar_data.Font = New Font("Arial", 11.25F, FontStyle.Bold)
@@ -179,11 +202,42 @@ Partial Class frm_consulta_vendas
         chk_agrupar_data.Text = "Agrupar totais por data"
         chk_agrupar_data.UseVisualStyleBackColor = False
         ' 
+        ' data
+        ' 
+        data.HeaderText = "Data"
+        data.Name = "data"
+        ' 
+        ' descricao
+        ' 
+        descricao.HeaderText = "Descrição / Cliente / Fornecedor"
+        descricao.Name = "descricao"
+        ' 
+        ' tipo
+        ' 
+        tipo.HeaderText = "Tipo"
+        tipo.Name = "tipo"
+        ' 
+        ' entrada
+        ' 
+        DataGridViewCellStyle1.ForeColor = Color.Green
+        DataGridViewCellStyle1.Format = "N2"
+        entrada.DefaultCellStyle = DataGridViewCellStyle1
+        entrada.HeaderText = "Entrada (+)"
+        entrada.Name = "entrada"
+        ' 
+        ' saida
+        ' 
+        DataGridViewCellStyle2.ForeColor = Color.Red
+        DataGridViewCellStyle2.Format = "N2"
+        saida.DefaultCellStyle = DataGridViewCellStyle2
+        saida.HeaderText = "Saída (-)"
+        saida.Name = "saida"
+        ' 
         ' frm_consulta_vendas
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.background
+        BackColor = Color.FromArgb(CByte(95), CByte(99), CByte(104))
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(937, 533)
         Controls.Add(chk_agrupar_data)
@@ -219,4 +273,9 @@ Partial Class frm_consulta_vendas
     Friend WithEvents rdb_saidas As RadioButton
     Friend WithEvents rdb_todos As RadioButton
     Friend WithEvents chk_agrupar_data As CheckBox
+    Friend WithEvents data As DataGridViewTextBoxColumn
+    Friend WithEvents descricao As DataGridViewTextBoxColumn
+    Friend WithEvents tipo As DataGridViewTextBoxColumn
+    Friend WithEvents entrada As DataGridViewTextBoxColumn
+    Friend WithEvents saida As DataGridViewTextBoxColumn
 End Class

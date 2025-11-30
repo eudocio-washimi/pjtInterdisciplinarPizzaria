@@ -23,195 +23,326 @@ Partial Class frm_menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_menu))
-        btn_gravar = New Button()
+        panelMenu = New Panel()
+        btn_produtos = New Button()
         btn_motoboys = New Button()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        Button5 = New Button()
-        btn_lancar = New Button()
-        MenuStrip1 = New MenuStrip()
-        CADASTRODECLIENTESToolStripMenuItem = New ToolStripMenuItem()
-        CADASTRODEMOTOBOYSToolStripMenuItem = New ToolStripMenuItem()
-        CADASTRODEPRODUTOSToolStripMenuItem = New ToolStripMenuItem()
-        CAToolStripMenuItem = New ToolStripMenuItem()
-        btn_agendar = New Button()
-        MenuStrip1.SuspendLayout()
+        btn_fornecedores = New Button()
+        btn_clientes = New Button()
+        btn_relatorios = New Button()
+        btn_gastos = New Button()
+        btn_graficos = New Button()
+        btn_reservas = New Button()
+        btn_pedidos = New Button()
+        panelLogo = New Panel()
+        Label1 = New Label()
+        PictureBox1 = New PictureBox()
+        Panel1 = New Panel()
+        lblTitulo = New Label()
+        panelConteudo = New Panel()
+        panelMenu.SuspendLayout()
+        panelLogo.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' btn_gravar
+        ' panelMenu
         ' 
-        btn_gravar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        btn_gravar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_gravar.Location = New Point(12, 49)
-        btn_gravar.Name = "btn_gravar"
-        btn_gravar.Size = New Size(111, 76)
-        btn_gravar.TabIndex = 15
-        btn_gravar.Text = "Cadastro de Clientes"
-        btn_gravar.UseVisualStyleBackColor = False
+        panelMenu.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        panelMenu.Controls.Add(btn_produtos)
+        panelMenu.Controls.Add(btn_motoboys)
+        panelMenu.Controls.Add(btn_fornecedores)
+        panelMenu.Controls.Add(btn_clientes)
+        panelMenu.Controls.Add(btn_relatorios)
+        panelMenu.Controls.Add(btn_gastos)
+        panelMenu.Controls.Add(btn_graficos)
+        panelMenu.Controls.Add(btn_reservas)
+        panelMenu.Controls.Add(btn_pedidos)
+        panelMenu.Controls.Add(panelLogo)
+        panelMenu.Dock = DockStyle.Left
+        panelMenu.Location = New Point(0, 0)
+        panelMenu.Name = "panelMenu"
+        panelMenu.Size = New Size(220, 741)
+        panelMenu.TabIndex = 0
+        ' 
+        ' btn_produtos
+        ' 
+        btn_produtos.BackColor = Color.Transparent
+        btn_produtos.Dock = DockStyle.Top
+        btn_produtos.FlatAppearance.BorderSize = 0
+        btn_produtos.FlatStyle = FlatStyle.Flat
+        btn_produtos.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_produtos.ForeColor = Color.Black
+        btn_produtos.Image = My.Resources.Resources.bottle_icon
+        btn_produtos.ImageAlign = ContentAlignment.MiddleLeft
+        btn_produtos.Location = New Point(0, 672)
+        btn_produtos.Name = "btn_produtos"
+        btn_produtos.Padding = New Padding(6, 0, 0, 0)
+        btn_produtos.Size = New Size(220, 70)
+        btn_produtos.TabIndex = 9
+        btn_produtos.Text = "  Produtos"
+        btn_produtos.TextAlign = ContentAlignment.MiddleLeft
+        btn_produtos.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_produtos.UseVisualStyleBackColor = False
         ' 
         ' btn_motoboys
         ' 
-        btn_motoboys.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        btn_motoboys.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_motoboys.Location = New Point(12, 131)
+        btn_motoboys.BackColor = Color.Transparent
+        btn_motoboys.Dock = DockStyle.Top
+        btn_motoboys.FlatAppearance.BorderSize = 0
+        btn_motoboys.FlatStyle = FlatStyle.Flat
+        btn_motoboys.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_motoboys.ForeColor = Color.Black
+        btn_motoboys.Image = My.Resources.Resources.moto_icon
+        btn_motoboys.ImageAlign = ContentAlignment.MiddleLeft
+        btn_motoboys.Location = New Point(0, 602)
         btn_motoboys.Name = "btn_motoboys"
-        btn_motoboys.Size = New Size(111, 76)
-        btn_motoboys.TabIndex = 17
-        btn_motoboys.Text = "Cadastro de Motoboys"
+        btn_motoboys.Padding = New Padding(12, 0, 0, 0)
+        btn_motoboys.Size = New Size(220, 70)
+        btn_motoboys.TabIndex = 8
+        btn_motoboys.Text = "  Cadastrar Motoboy"
+        btn_motoboys.TextAlign = ContentAlignment.MiddleLeft
+        btn_motoboys.TextImageRelation = TextImageRelation.ImageBeforeText
         btn_motoboys.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btn_fornecedores
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Button1.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(12, 213)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(111, 76)
-        Button1.TabIndex = 18
-        Button1.Text = "Cadastro de Produtos"
-        Button1.UseVisualStyleBackColor = False
+        btn_fornecedores.BackColor = Color.Transparent
+        btn_fornecedores.Dock = DockStyle.Top
+        btn_fornecedores.FlatAppearance.BorderSize = 0
+        btn_fornecedores.FlatStyle = FlatStyle.Flat
+        btn_fornecedores.Font = New Font("Arial", 11.25F, FontStyle.Bold)
+        btn_fornecedores.ForeColor = Color.Black
+        btn_fornecedores.Image = My.Resources.Resources.Pictogrammers_Material_Store_48
+        btn_fornecedores.ImageAlign = ContentAlignment.MiddleLeft
+        btn_fornecedores.Location = New Point(0, 532)
+        btn_fornecedores.Name = "btn_fornecedores"
+        btn_fornecedores.Padding = New Padding(12, 0, 0, 0)
+        btn_fornecedores.Size = New Size(220, 70)
+        btn_fornecedores.TabIndex = 7
+        btn_fornecedores.Text = "  Fornecedores"
+        btn_fornecedores.TextAlign = ContentAlignment.MiddleLeft
+        btn_fornecedores.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_fornecedores.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' btn_clientes
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Button2.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(140, 49)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(111, 76)
-        Button2.TabIndex = 19
-        Button2.Text = "Pedidos"
-        Button2.UseVisualStyleBackColor = False
+        btn_clientes.BackColor = Color.Transparent
+        btn_clientes.Dock = DockStyle.Top
+        btn_clientes.FlatAppearance.BorderSize = 0
+        btn_clientes.FlatStyle = FlatStyle.Flat
+        btn_clientes.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_clientes.ForeColor = Color.Black
+        btn_clientes.Image = My.Resources.Resources.customer_icon
+        btn_clientes.ImageAlign = ContentAlignment.MiddleLeft
+        btn_clientes.Location = New Point(0, 462)
+        btn_clientes.Name = "btn_clientes"
+        btn_clientes.Padding = New Padding(12, 0, 0, 0)
+        btn_clientes.Size = New Size(220, 70)
+        btn_clientes.TabIndex = 6
+        btn_clientes.Text = "  Cadastrar Cliente"
+        btn_clientes.TextAlign = ContentAlignment.MiddleLeft
+        btn_clientes.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_clientes.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' btn_relatorios
         ' 
-        Button3.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Button3.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(140, 131)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(111, 76)
-        Button3.TabIndex = 20
-        Button3.Text = "Relatórios/Consultar"
-        Button3.UseVisualStyleBackColor = False
+        btn_relatorios.BackColor = Color.Transparent
+        btn_relatorios.Dock = DockStyle.Top
+        btn_relatorios.FlatAppearance.BorderSize = 0
+        btn_relatorios.FlatStyle = FlatStyle.Flat
+        btn_relatorios.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_relatorios.ForeColor = Color.Black
+        btn_relatorios.Image = My.Resources.Resources.finances_icon
+        btn_relatorios.ImageAlign = ContentAlignment.MiddleLeft
+        btn_relatorios.Location = New Point(0, 392)
+        btn_relatorios.Name = "btn_relatorios"
+        btn_relatorios.Padding = New Padding(12, 0, 0, 0)
+        btn_relatorios.Size = New Size(220, 70)
+        btn_relatorios.TabIndex = 5
+        btn_relatorios.Text = "  Visualizar Finanças"
+        btn_relatorios.TextAlign = ContentAlignment.MiddleLeft
+        btn_relatorios.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_relatorios.UseVisualStyleBackColor = False
         ' 
-        ' Button4
+        ' btn_gastos
         ' 
-        Button4.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Button4.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(140, 213)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(111, 76)
-        Button4.TabIndex = 21
-        Button4.Text = "Gráficos"
-        Button4.UseVisualStyleBackColor = False
+        btn_gastos.BackColor = Color.Transparent
+        btn_gastos.Dock = DockStyle.Top
+        btn_gastos.FlatAppearance.BorderSize = 0
+        btn_gastos.FlatStyle = FlatStyle.Flat
+        btn_gastos.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_gastos.ForeColor = Color.Black
+        btn_gastos.Image = My.Resources.Resources.bills_icon
+        btn_gastos.ImageAlign = ContentAlignment.MiddleLeft
+        btn_gastos.Location = New Point(0, 322)
+        btn_gastos.Name = "btn_gastos"
+        btn_gastos.Padding = New Padding(12, 0, 0, 0)
+        btn_gastos.Size = New Size(220, 70)
+        btn_gastos.TabIndex = 4
+        btn_gastos.Text = "  Cadastrar Gastos"
+        btn_gastos.TextAlign = ContentAlignment.MiddleLeft
+        btn_gastos.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_gastos.UseVisualStyleBackColor = False
         ' 
-        ' Button5
+        ' btn_graficos
         ' 
-        Button5.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Button5.Font = New Font("Arial Black", 9F, FontStyle.Bold)
-        Button5.Location = New Point(12, 295)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(111, 76)
-        Button5.TabIndex = 22
-        Button5.Text = "Fornecedores"
-        Button5.UseVisualStyleBackColor = False
+        btn_graficos.BackColor = Color.Transparent
+        btn_graficos.Dock = DockStyle.Top
+        btn_graficos.FlatAppearance.BorderSize = 0
+        btn_graficos.FlatStyle = FlatStyle.Flat
+        btn_graficos.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_graficos.ForeColor = Color.Black
+        btn_graficos.Image = My.Resources.Resources.chart
+        btn_graficos.ImageAlign = ContentAlignment.MiddleLeft
+        btn_graficos.Location = New Point(0, 252)
+        btn_graficos.Name = "btn_graficos"
+        btn_graficos.Padding = New Padding(12, 0, 0, 0)
+        btn_graficos.Size = New Size(220, 70)
+        btn_graficos.TabIndex = 3
+        btn_graficos.Text = "  Visualizar Gráficos"
+        btn_graficos.TextAlign = ContentAlignment.MiddleLeft
+        btn_graficos.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_graficos.UseVisualStyleBackColor = False
         ' 
-        ' btn_lancar
+        ' btn_reservas
         ' 
-        btn_lancar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        btn_lancar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_lancar.Location = New Point(140, 298)
-        btn_lancar.Name = "btn_lancar"
-        btn_lancar.Size = New Size(109, 73)
-        btn_lancar.TabIndex = 47
-        btn_lancar.Text = "Lançar Despesa"
-        btn_lancar.UseVisualStyleBackColor = False
+        btn_reservas.BackColor = Color.Transparent
+        btn_reservas.Dock = DockStyle.Top
+        btn_reservas.FlatAppearance.BorderSize = 0
+        btn_reservas.FlatStyle = FlatStyle.Flat
+        btn_reservas.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_reservas.ForeColor = Color.Black
+        btn_reservas.Image = My.Resources.Resources.reserva
+        btn_reservas.ImageAlign = ContentAlignment.MiddleLeft
+        btn_reservas.Location = New Point(0, 182)
+        btn_reservas.Name = "btn_reservas"
+        btn_reservas.Padding = New Padding(12, 0, 0, 0)
+        btn_reservas.Size = New Size(220, 70)
+        btn_reservas.TabIndex = 2
+        btn_reservas.Text = "  Cadastrar Reserva"
+        btn_reservas.TextAlign = ContentAlignment.MiddleLeft
+        btn_reservas.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_reservas.UseVisualStyleBackColor = False
         ' 
-        ' MenuStrip1
+        ' btn_pedidos
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {CADASTRODECLIENTESToolStripMenuItem, CADASTRODEMOTOBOYSToolStripMenuItem, CADASTRODEPRODUTOSToolStripMenuItem, CAToolStripMenuItem})
-        MenuStrip1.Location = New Point(0, 0)
-        MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1864, 24)
-        MenuStrip1.TabIndex = 48
-        MenuStrip1.Text = "MenuStrip1"
+        btn_pedidos.BackColor = Color.Transparent
+        btn_pedidos.Dock = DockStyle.Top
+        btn_pedidos.FlatAppearance.BorderSize = 0
+        btn_pedidos.FlatStyle = FlatStyle.Flat
+        btn_pedidos.Font = New Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_pedidos.ForeColor = Color.Black
+        btn_pedidos.Image = My.Resources.Resources.pizza_icon1
+        btn_pedidos.ImageAlign = ContentAlignment.MiddleLeft
+        btn_pedidos.Location = New Point(0, 112)
+        btn_pedidos.Name = "btn_pedidos"
+        btn_pedidos.Padding = New Padding(12, 0, 0, 0)
+        btn_pedidos.Size = New Size(220, 70)
+        btn_pedidos.TabIndex = 1
+        btn_pedidos.Text = "  Cadastrar Pedidos"
+        btn_pedidos.TextAlign = ContentAlignment.MiddleLeft
+        btn_pedidos.TextImageRelation = TextImageRelation.ImageBeforeText
+        btn_pedidos.UseVisualStyleBackColor = False
         ' 
-        ' CADASTRODECLIENTESToolStripMenuItem
+        ' panelLogo
         ' 
-        CADASTRODECLIENTESToolStripMenuItem.Name = "CADASTRODECLIENTESToolStripMenuItem"
-        CADASTRODECLIENTESToolStripMenuItem.Size = New Size(151, 20)
-        CADASTRODECLIENTESToolStripMenuItem.Text = "CADASTRO DE &CLIENTES"
+        panelLogo.BackColor = Color.FromArgb(CByte(204), CByte(86), CByte(0))
+        panelLogo.Controls.Add(Label1)
+        panelLogo.Controls.Add(PictureBox1)
+        panelLogo.Dock = DockStyle.Top
+        panelLogo.Location = New Point(0, 0)
+        panelLogo.Name = "panelLogo"
+        panelLogo.Size = New Size(220, 112)
+        panelLogo.TabIndex = 0
         ' 
-        ' CADASTRODEMOTOBOYSToolStripMenuItem
+        ' Label1
         ' 
-        CADASTRODEMOTOBOYSToolStripMenuItem.Name = "CADASTRODEMOTOBOYSToolStripMenuItem"
-        CADASTRODEMOTOBOYSToolStripMenuItem.Size = New Size(163, 20)
-        CADASTRODEMOTOBOYSToolStripMenuItem.Text = "CADASTRO DE &MOTOBOYS"
+        Label1.AutoSize = True
+        Label1.Font = New Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(87, 46)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(133, 22)
+        Label1.TabIndex = 0
+        Label1.Text = "Pizza System"
         ' 
-        ' CADASTRODEPRODUTOSToolStripMenuItem
+        ' PictureBox1
         ' 
-        CADASTRODEPRODUTOSToolStripMenuItem.Name = "CADASTRODEPRODUTOSToolStripMenuItem"
-        CADASTRODEPRODUTOSToolStripMenuItem.Size = New Size(160, 20)
-        CADASTRODEPRODUTOSToolStripMenuItem.Text = "CADASTRO DE &PRODUTOS"
+        PictureBox1.Image = My.Resources.Resources.food_delivery_1_
+        PictureBox1.Location = New Point(3, 12)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(82, 83)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 1
+        PictureBox1.TabStop = False
         ' 
-        ' CAToolStripMenuItem
+        ' Panel1
         ' 
-        CAToolStripMenuItem.Name = "CAToolStripMenuItem"
-        CAToolStripMenuItem.Size = New Size(187, 20)
-        CAToolStripMenuItem.Text = "CADASTRO DE FORNECEDORES"
+        Panel1.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        Panel1.Controls.Add(lblTitulo)
+        Panel1.Dock = DockStyle.Top
+        Panel1.Location = New Point(220, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1129, 112)
+        Panel1.TabIndex = 1
         ' 
-        ' btn_agendar
+        ' lblTitulo
         ' 
-        btn_agendar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        btn_agendar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_agendar.Location = New Point(73, 386)
-        btn_agendar.Name = "btn_agendar"
-        btn_agendar.Size = New Size(109, 68)
-        btn_agendar.TabIndex = 51
-        btn_agendar.Text = "Agendar"
-        btn_agendar.UseVisualStyleBackColor = False
+        lblTitulo.Anchor = AnchorStyles.None
+        lblTitulo.AutoSize = True
+        lblTitulo.Font = New Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitulo.ForeColor = Color.White
+        lblTitulo.Location = New Point(460, 45)
+        lblTitulo.Name = "lblTitulo"
+        lblTitulo.Size = New Size(183, 24)
+        lblTitulo.TabIndex = 0
+        lblTitulo.Text = "MENU PRINCIPAL"
+        ' 
+        ' panelConteudo
+        ' 
+        panelConteudo.BackColor = Color.Gray
+        panelConteudo.Dock = DockStyle.Fill
+        panelConteudo.ForeColor = Color.White
+        panelConteudo.Location = New Point(220, 112)
+        panelConteudo.Name = "panelConteudo"
+        panelConteudo.Size = New Size(1129, 629)
+        panelConteudo.TabIndex = 3
         ' 
         ' frm_menu
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackColor = Color.FromArgb(CByte(95), CByte(99), CByte(104))
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1864, 891)
-        Controls.Add(btn_agendar)
-        Controls.Add(btn_lancar)
-        Controls.Add(Button5)
-        Controls.Add(Button4)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(btn_motoboys)
-        Controls.Add(btn_gravar)
-        Controls.Add(MenuStrip1)
-        MainMenuStrip = MenuStrip1
+        ClientSize = New Size(1349, 741)
+        Controls.Add(panelConteudo)
+        Controls.Add(Panel1)
+        Controls.Add(panelMenu)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frm_menu"
-        Text = "menu"
-        WindowState = FormWindowState.Maximized
-        MenuStrip1.ResumeLayout(False)
-        MenuStrip1.PerformLayout()
+        Text = "Pizza System"
+        panelMenu.ResumeLayout(False)
+        panelLogo.ResumeLayout(False)
+        panelLogo.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
-    Friend WithEvents btn_gravar As Button
+    Friend WithEvents panelMenu As Panel
+    Friend WithEvents btn_pedidos As Button
+    Friend WithEvents btn_fornecedores As Button
+    Friend WithEvents btn_clientes As Button
+    Friend WithEvents btn_relatorios As Button
+    Friend WithEvents btn_gastos As Button
+    Friend WithEvents btn_graficos As Button
+    Friend WithEvents btn_reservas As Button
     Friend WithEvents btn_motoboys As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents btn_lancar As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents CADASTRODECLIENTESToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CADASTRODEMOTOBOYSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CADASTRODEPRODUTOSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CAToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents btn_agendar As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblTitulo As Label
+    Friend WithEvents btn_produtos As Button
+    Friend WithEvents panelLogo As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents panelConteudo As Panel
 End Class
