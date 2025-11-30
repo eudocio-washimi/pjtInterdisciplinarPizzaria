@@ -4,7 +4,6 @@
 
     Private Sub frm_gastos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CarregarFornecedores()
-        ConfigurarGrid()
         CarregarHistorico()
         rdb_variavel.Checked = True
         limpar_campos()
@@ -36,43 +35,6 @@
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
         End If
-    End Sub
-
-    Sub ConfigurarGrid()
-        dgv_historico.Columns.Clear()
-
-        dgv_historico.Columns.Add("id", "ID")
-        dgv_historico.Columns("id").Width = 40
-
-        dgv_historico.Columns.Add("data", "Data")
-        dgv_historico.Columns("data").Width = 80
-
-        dgv_historico.Columns.Add("fornecedor", "Fornecedor")
-        dgv_historico.Columns("fornecedor").Width = 150
-
-        dgv_historico.Columns.Add("desc", "Descrição")
-        dgv_historico.Columns("desc").Width = 200
-
-        dgv_historico.Columns.Add("valor", "Valor")
-        dgv_historico.Columns.Add("tipo", "Tipo")
-
-        dgv_historico.Columns.Add("id_forn", "ID_Forn")
-        dgv_historico.Columns("id_forn").Visible = False
-
-        Dim btnEditar As New DataGridViewButtonColumn()
-        btnEditar.Name = "btn_editar"
-        btnEditar.HeaderText = "Editar"
-        btnEditar.Text = "Editar"
-        btnEditar.UseColumnTextForButtonValue = True
-        dgv_historico.Columns.Add(btnEditar)
-
-        Dim btnExcluir As New DataGridViewButtonColumn()
-        btnExcluir.Name = "btn_excluir"
-        btnExcluir.HeaderText = "Excluir"
-        btnExcluir.Text = "X"
-        btnExcluir.UseColumnTextForButtonValue = True
-        btnExcluir.Width = 30
-        dgv_historico.Columns.Add(btnExcluir)
     End Sub
 
     Sub CarregarFornecedores()

@@ -109,9 +109,9 @@ Partial Class frm_gastos
         Label1.Font = New Font("Arial", 12F, FontStyle.Bold)
         Label1.Location = New Point(139, 131)
         Label1.Name = "Label1"
-        Label1.Size = New Size(92, 19)
+        Label1.Size = New Size(44, 19)
         Label1.TabIndex = 43
-        Label1.Text = "Data Inicial"
+        Label1.Text = "Data"
         ' 
         ' dtp_data
         ' 

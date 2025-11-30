@@ -157,7 +157,7 @@ Partial Class frm_reservas
         txt_obs.Location = New Point(170, 224)
         txt_obs.Multiline = True
         txt_obs.Name = "txt_obs"
-        txt_obs.Size = New Size(207, 127)
+        txt_obs.Size = New Size(191, 116)
         txt_obs.TabIndex = 48
         ' 
         ' Label5
@@ -175,7 +175,8 @@ Partial Class frm_reservas
         ' btn_agendar
         ' 
         btn_agendar.Anchor = AnchorStyles.Left
-        btn_agendar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_agendar.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        btn_agendar.FlatStyle = FlatStyle.Flat
         btn_agendar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn_agendar.Location = New Point(40, 272)
         btn_agendar.Name = "btn_agendar"
@@ -208,7 +209,8 @@ Partial Class frm_reservas
         ' btn_filtrar
         ' 
         btn_filtrar.Anchor = AnchorStyles.Top
-        btn_filtrar.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        btn_filtrar.BackColor = Color.FromArgb(CByte(253), CByte(109), CByte(44))
+        btn_filtrar.FlatStyle = FlatStyle.Flat
         btn_filtrar.Font = New Font("Arial Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn_filtrar.Location = New Point(736, 16)
         btn_filtrar.Name = "btn_filtrar"

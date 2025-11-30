@@ -125,9 +125,9 @@ Partial Class frm_cad_motoboy
         Label2.Font = New Font("Arial", 12F, FontStyle.Bold)
         Label2.Location = New Point(84, 36)
         Label2.Name = "Label2"
-        Label2.Size = New Size(135, 19)
+        Label2.Size = New Size(149, 19)
         Label2.TabIndex = 20
-        Label2.Text = "Nome do Cliente"
+        Label2.Text = "Nome do Motoboy"
         ' 
         ' txt_telefone
         ' 
